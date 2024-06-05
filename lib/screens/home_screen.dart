@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
             Text(
               'Welcome to My Flutter App!',
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 200),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
