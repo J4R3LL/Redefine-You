@@ -7,7 +7,7 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => UserProvider(),
-      child: ScaffoldExampleApp(),
+      child: MyApp(),
     ),
   );
 }
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: homeScreen(),
     );
   }
 }
