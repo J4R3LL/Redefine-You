@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter_app/widgets/custom_button.dart';
+import '../widgets/custom_button.dart';
+import '../widgets/custom_homeBody.dart';
 
 class homeScreen extends StatefulWidget {
   const homeScreen({super.key, String? username, });
@@ -52,7 +53,7 @@ class Homepage extends State<homeScreen>
       body: TabBarView(
         controller: _tabController,
         children: const <Widget>[
-          Center(child: Text("It's cloudy here"),),
+          PhysicalTab(),
           Center(child: Text("It's rainy here"),),
           Center(child: Text("It's sunny here"),),
         ],
