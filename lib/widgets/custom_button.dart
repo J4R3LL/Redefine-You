@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './custom_pageroute.dart';
-import '../screens/home_screen.dart';
+import '../screens/home.dart';
 import '../screens/inbox.dart';
 import '../screens/social.dart';
 import '../screens/account.dart';

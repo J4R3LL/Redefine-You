@@ -38,15 +38,9 @@ class Homepage extends State<homeScreen>
             vertical: 0,
           ),
           tabs: <Widget>[
-            Tab(
-                text: 'Physical',
-              ),
-              Tab(
-                text: 'Mental',
-              ),
-              Tab(
-                text: 'Financial',
-              ),
+            Tab(text: 'Physical',),
+            Tab(text: 'Mental',),
+            Tab(text: 'Financial',),
           ]
         )
       ),

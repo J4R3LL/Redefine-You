@@ -84,18 +84,29 @@ queryDB(query) async {
   return results;
 }
 
-Future<void> _saveData() async {
-  final prefs = await SharedPreferences.getInstance();
-  prefs.setString('key', 'value');
+class LocalStorageUtil {
+  static SharedPreferences? _prefs;
+
+  static Future<void> init() async {
+    try {
+      _prefs = await SharedPreferences.getInstance();
+    } catch (e) {
+      // Handle initialization error
+      print('Error initializing SharedPreferences: $e');
+    }
+  }
+
+  static Future<void> saveData(String key, String data) async {
+    if (_prefs == null) await init();
+    await _prefs?.setString(key, data);
+  }
+
+  static String? loadData(String key) {
+    if (_prefs == null) return null;
+    return _prefs?.getString(key);
+  }
 }
 
-// Retrieve data
-Future<void> _readData() async {
-
-  final prefs = await SharedPreferences.getInstance();
-  final value = prefs.getString('key');
-  print('Value: $value');
-}
 
 class UserProvider with ChangeNotifier {
   String _name = 'John Doe';
