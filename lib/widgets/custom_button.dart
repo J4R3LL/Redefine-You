@@ -41,7 +41,7 @@ class bottomNavigationBar extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacement(
                   context,
-                  CustomPageRouteBuilder(child: socialScreen()),
+                  CustomPageRouteBuilder(child: SocialScreen()),
                 );
               },
             ),
