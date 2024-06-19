@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_flutter_app/widgets/custom_button.dart';
 import '../widgets/infinitescroll.dart';
 import '../screens/friendlist.dart';
 
@@ -48,7 +49,7 @@ class _SocialScreenState extends State<SocialScreen> {
     super.dispose();
   }
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -80,26 +81,7 @@ class _SocialScreenState extends State<SocialScreen> {
           );
         },
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        currentIndex: 0, // Set the currently selected index
-        onTap: (int index) {
-          // Handle bottom navigation bar tap events here
-        },
-      ),
+      bottomNavigationBar:bottomNavigationBar()
     );
   }
 }
